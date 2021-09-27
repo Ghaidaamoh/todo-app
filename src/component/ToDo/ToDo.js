@@ -6,7 +6,6 @@ import Headers from '../Header/header';
 import './todo.scss'
 
 const ToDo = () => {
-
   const [list, setList] = useState([]);
   const [incomplete, setIncomplete] = useState([]);
 
@@ -42,9 +41,9 @@ const ToDo = () => {
     <>
       <Headers />
       <div className="todo">
-      <h1 className="title">To Do List Manager ({incomplete} )</h1>
-      <Form addItem={addItem} />
-      <List list={list} toggleComplete={toggleComplete} />
+        <h1 className="title">To Do List Manager ({incomplete} )</h1>
+        <Form addItem={addItem} />
+        <List list={list} toggleComplete={toggleComplete} />
       </div>
     </>
   );
