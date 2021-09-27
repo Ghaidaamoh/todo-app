@@ -66,6 +66,7 @@ export default function List(props) {
         <Card key={item.id}>
           <Card.Body>
             <Card.Title> {item.text} </Card.Title>
+            <Button id="close" variant="secondary" onClick={()=>props.deletefun(item.id)}> X </Button>
             <Card.Text>
               Assigned to: {item.assignee}
             </Card.Text>

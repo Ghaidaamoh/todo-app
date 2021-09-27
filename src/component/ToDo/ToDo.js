@@ -43,7 +43,7 @@ const ToDo = () => {
       <div className="todo">
         <h1 className="title">To Do List Manager ({incomplete} )</h1>
         <Form addItem={addItem} />
-        <List list={list} toggleComplete={toggleComplete} />
+        <List list={list} toggleComplete={toggleComplete} deletefun={deleteItem} />
       </div>
     </>
   );
