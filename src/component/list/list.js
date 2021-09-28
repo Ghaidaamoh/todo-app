@@ -2,6 +2,8 @@ import React, { useState, useContext, useEffect } from 'react'
 import { SettingsContext } from '../../context';
 import {Card, Button} from 'react-bootstrap'
 import './list.scss'
+import Auth from '../context/auth';
+
 export default function List(props) {
 
   const settingsContext = useContext(SettingsContext);
@@ -72,7 +74,9 @@ export default function List(props) {
             <Card.Text>
               Difficulty: {item.difficulty}
             </Card.Text>
+<Auth capability="update">
             <Button onClick={() => props.toggleComplete(item.id)}>Complete: {item.complete.toString()}</Button>
+</Auth>
           </Card.Body>
         </Card>
       ))}
