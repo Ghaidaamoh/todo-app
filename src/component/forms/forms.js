@@ -3,10 +3,12 @@ import useForm from '../../Hooks/form';
 import { FormGroup,InputGroup } from '@blueprintjs/core';
 import './form.scss'
 import { Button } from "react-bootstrap";
+import Auth from "../context/auth";
 export default function Form(props){
     const { handleChange, handleSubmit } = useForm(props.addItem);
 
     return(
+        <Auth capability="create">
         <form className="form" onSubmit={handleSubmit}>
             <h2>Add To Do Item</h2>
             <FormGroup 
@@ -28,5 +30,6 @@ export default function Form(props){
             </FormGroup>
             <Button type="submit">Add Item</Button>
         </form>
+ </Auth>
     )
 }
