@@ -16,7 +16,12 @@
     "react-router-dom": "5.2.0",
     "react-scripts": "4.0.3",
     "uuid": "^8.3.2",
-    "web-vitals": "^1.1.2"
+    "web-vitals": "^1.1.2",
+    "sweetalert2": "^11.1.7",
+    "superagent": "^6.1.0",
+    "react-cookies": "^0.1.1",
+    "jsonwebtoken": "^8.5.1",
+    "base-64": "^1.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
