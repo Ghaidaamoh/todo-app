@@ -1,5 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import LoginProvider from "./component/context/context";
+
 
 import ToDo from './component/ToDo/ToDo';
 import SettingProvider from './context';
@@ -7,9 +9,11 @@ import SettingProvider from './context';
 export default class App extends React.Component {
   render() {
     return (
-      <SettingProvider>
-        <ToDo />
-      </SettingProvider>
+      <LoginProvider>
+          <SettingProvider>
+              <ToDo />
+          </SettingProvider>
+      </LoginProvider>
     );
   }
 }

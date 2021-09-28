@@ -4,6 +4,7 @@ import List from '../list/list';
 import Form from '../forms/forms';
 import Headers from '../Header/header';
 import './todo.scss'
+import Auth from '../context/auth';
 
 const ToDo = () => {
   const [list, setList] = useState([]);
@@ -40,11 +41,13 @@ const ToDo = () => {
   return (
     <>
       <Headers />
+    <Auth capability="read">
       <div className="todo">
         <h1 className="title">To Do List Manager ({incomplete} )</h1>
         <Form addItem={addItem} />
         <List list={list} toggleComplete={toggleComplete} deletefun={deleteItem} />
       </div>
+    </Auth>
     </>
   );
 };
