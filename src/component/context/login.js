@@ -3,7 +3,7 @@ import { useContext, useState } from "react";
 import { When } from "react-if";
 import { LoginContext } from "./context";
 import { Button } from "react-bootstrap";
-import "./login.css"
+import "./login.scss"
 import Swal from 'sweetalert2'
 
 export default function Login(props) {
